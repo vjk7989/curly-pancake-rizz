@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gradient: linear-gradient(to top left, #1a1a1a, #333333);
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 20%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 20%;
+  }
+}
+
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: hsl(var(--background));
+  border-radius: 8px;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+  color: hsl(var(--primary));
+  background-color: hsl(var(--primary));
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--background));
+}
+
+.dotPattern {
+  background-image: radial-gradient(#471696 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.use-automation-zoom-in {
+  animation: automation-zoom-in 0.5s;
+}
+
+.card-mask {
+  background: radial-gradient(ellipse at center, rgba(71, 22, 150, 0.15), transparent);
+}
+
+.gradient {
+  background: conic-gradient(
+    from 230.29deg at 51.63% 52.16%, 
+    #471696 0deg, 
+    rgb(108, 39, 157) 67.5deg, 
+    rgb(54, 103, 196) 198.75deg, 
+    rgb(105, 30, 255) 251.25deg, 
+    #471696 360deg
+  );
+}
+
+.lamp {
+  opacity: 1;
+  transform: translateY(-200px) rotate(180deg) scale(2) translateZ(0px);
+}
+
+@keyframes automation-zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
